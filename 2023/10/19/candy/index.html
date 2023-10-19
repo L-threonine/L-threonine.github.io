@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>姜饼小人 | Threonine&#39;s blog</title>
+    <meta name="author" content="Threonine" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.4/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.8.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.8.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>THREONINE&#39;S BLOG</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;THREONINE&#39;S BLOG</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>姜饼小人</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/10/19
+        </span>
+        
+        <span class="category">
+            <a href="/categories/Past/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                Past
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/Sensibility/" style="color: #00a596">Sensibility</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <font size="4" weight=bold>
+Ⅰ
+</font>
+
+<p>圣诞节糖果屋的隔壁是姜饼镇，镇子里住着许许多多的姜饼小人。<br>或许是因为大家都是姜饼，所以镇子里总是弥漫着刚烤好的饼干独有的，甜蜜温暖的香气。只有在偶尔下糖霜的时候，蜂蜜的味道才会短暂地被盖过一会会，变成亮晶晶的星星，落在屋顶和路边的松树上。<br>小镇的居民们都有自己的性格——有的拥有巧克力外皮，看起来更坚硬一点点；有的加了红糖，有更醇厚的甜；有的头顶有五彩斑斓的糖球，有的加了双倍的姜粉……虽然配料有所不同，但每一只姜饼小人都一定有一颗糖做的、晶莹剔透的心，在胸腔的左边扑通扑通地跳动。<br>心对于姜饼小人来说，是很重要很重要的东西，所以每只姜饼小人都会尽自己最大的努力，让自己的心更纯粹一点更甜一点。这样，在展示自己的心的时候，就可以很骄傲地拍拍胸脯说：“快看！这是我的心！我敢说你不会再见到比这更完整更美丽更甜的心了。”<br>每一只姜饼小人都以拥有更大更甜的心为骄傲。有时候互相信任的两只姜饼小人，会把自己的心暂时寄存在对方的胸口，这样可以让两颗心都变得更甜。但是因为心是易碎品，所以把心送给其他姜饼小人是有一点风险的——毕竟总有冒失鬼不小心摔碎了别人的心，或者是没有照顾好导致变质不那么甜了。所以大家在决定送出自己的心的时候，总是会拿出一万倍的谨慎，努力选一个最可靠的姜饼人。<br>在姜饼小镇，能够收到别人的心，是比能拥有最甜的心更值得骄傲的事情。</p>
+<font size="4" weight=bold>
+Ⅱ
+</font>
+
+<p>苏苏是姜饼镇的一只“普通”姜饼小人——之所以不普通是因为，她的心不仅不甜，甚至有一点微微的苦。或许是因为那天烤姜饼的小姑娘忙忘了加糖，或者是烤箱的温度太高了一点点，再或者可能只是糖霜天太冷了……总之她努力养了很久，却发现怎么都养不甜。要知道，哪怕是变质的心，都应该是甜的才对。<br>“怎么会这样呢？”她第无数次仔细检查自己的心——晶莹的，完整的，单从外表上看再漂亮不过——但依旧一点都不甜。苏苏重重地叹了口气，托着腮看向窗外发呆。不甜的心真是太糟糕了，连最喜欢的糖霜天都没法让她担忧的心情减少一点点。<br>她甚至尝试过收集糖霜，再用它们把心裹上厚厚的一层，这样能让心暂时变得甜一点点。但是只要糖霜融化，一切就会回归原状。<br>“如果把我的心寄存在别人的胸口，会不会让它变甜一点点呢？”</p>
+<font size="4" weight=bold>
+Ⅲ
+</font>
+
+<p>说干就干，苏苏找出围巾手套帽子把自己裹得严严实实，再确认了一下心被很安全地放在胸口不会摔下来。临出门之前，她想了想，捎上了几块小蛋糕——虽然不知道和其他姜饼小人互换心需要什么礼节，但美味的小蛋糕总是不会被拒绝的吧！这么想着，她冲进漫天飞舞的糖霜里。<br>今年的第一场糖霜出人意料地温柔，刚在路面的玻璃糖上积了薄薄的一层，在暖黄的灯下浮出一圈毛茸茸的光晕。有一片飘飘荡荡地落在了苏苏的嘴角。她伸出舌头悄悄舔走，唔，是甜的。<br>我的心也一定一定能变甜的。</p>
+<font size="4" weight=bold>
+Ⅳ
+</font>
+
+<p>要把心寄存给谁呢？<br>苏苏一边跑一边想：隔壁的邻居大叔和开花店的阿姨很久之前就互换了心，每天早晨送甜牛奶的快递小哥忘了问住址，楼下新开那家早餐店里的男孩子或许是很好的选择，毕竟他们家的流沙馅奶黄包真的很好吃……她抬起头看了看早餐店还没亮起的招牌，鼓起勇气敲了敲门。<br>“你好，请问你需要一颗心吗？”<br>门吱呀一声开了，男孩子从门后探出半个头发乱翘的脑袋，声音里有刚醒的茫然：“唔是谁……诶是你呀，先进来坐坐吧。”<br>苏苏局促不安地捏着裙摆，后知后觉地发现自己在晚上贸贸然打扰别人的行为好像有一点不太合适。“这是，这是我的心！啊对了还有蛋糕！”她小心翼翼地捧出自己的心，做了好几个深呼吸，磕磕绊绊地说明自己的来意。<br>“所以你是想要和我交换心对吗？”对面的男孩子歪了歪头，眼底有不明显的为难，“可是你的心，为什么不甜呢？”<br>“对不起我不知道。”苏苏有些慌乱地试图解释，“我想或许，或许寄存在其他人那里会让它变甜一点点呢……”她的声音越来越小，到最后几乎要听不见了。<br>大家都只能和一个人交换的话，让别人拿到不甜的心好像确实是，有一点不好的。<br>苏苏低头揉了揉脸，带着歉意说道：“对不起打扰你休息了！蛋糕是我觉得很好吃的口味，就送给你了~我先回家啦。”<br>在转身的后一秒，她听见了自己姜饼小人生涯里最动听的声音。<br>“不过，也不是不可以。”</p>
+<font size="4" weight=bold>
+Ⅴ
+</font>
+
+<p>抱着对方的心回到家，再小心地放进胸口最温暖的位置，苏苏感觉自己像是做了一个很长很长的梦。她把右手放上胸口，感受来自他人的，另一颗香甜的心的有力搏动，胸口被填满的幸福感让她有些恍惚。<br>我一定要，把这颗心养得更甜更漂亮。她暗暗告诉自己，带着对明天的满腔期待，难得地做了一个好梦。<br>之后的几天里，苏苏用了所有能想到的方法，认真细致地照料着胸口的心。看着这颗心在自己的努力下闪闪发光的样子，她嘴角不自觉挂上笑意。<br>我的心会不会已经变甜了一点点呢？<br>某天晚上在例行对心的保养的时候，她突然期待起来。<br>很奇怪的是，不知道为什么，在想到自己的心的一刹那，一阵莫大的哀恸没来由地突然击碎了她。像是被尖锐的荆棘细密地扎进每一寸皮肤，她跌倒在地，痛苦地大喘着气，泪沿着脸颊滚落，砸成了一地碎片。<br>她抱紧膝盖，努力把自己蜷成很小一团，等着这阵巨大的悲伤过去。指尖用力得发白，身体在紧绷状态下不规律地颤抖着。<br>我要去看看我的心。<br>我必须要去看看它。<br>因为它好像，很难过很难过。</p>
+<font size="4" weight=bold>
+Ⅵ
+</font>
+
+<p>糖霜已经连着落了几天了，天气格外的冷，呼出的热气很快变成白雾，和跌跌撞撞的脚步一起飘散在深夜的空气里。<br>在有很好吃奶黄包早餐店后面的小巷子里，在没有路灯照到的、冻得冷冰冰的垃圾桶的最底下，有一颗碎掉的心。<br>锋利的碎片割伤了姜饼小人的手，风从心碎裂的空洞里穿过，发出呜呜的声音。残余的微弱跳动像是快要摸不到的呼吸，一用力就散了。<br>今天是真的好冷好冷啊。<br>我的心怎么还是不甜呢。</p>
+<font size="4" weight=bold>
+Ⅶ
+</font>
+
+<p>太阳光温柔地撒在苏苏的身上，她揉了揉有点疼的腰，撑着墙站起来。<br>心碎得只剩一小半了，怎么办呢。她皱着眉头发起愁来。虽说是被不小心打碎了，不过自己的心不甜，似乎不被好好照顾也是可以原谅的。<br>而且那个男孩子也很认真的道歉了，他的心也还给他了，好像一切都很合理地结束了。<br>苏苏很小心地把心放进胸口，捂了一晚上的心恢复了一点点力气，在胸口缓慢却规律地跳动着。她理了理乱糟糟的头发，扯平睡得皱巴巴的外套，决定去早餐店买两个刚出炉热腾腾的流沙奶黄包。<br>糖霜积了厚厚一层，在阳光下闪烁着，踩过时会发出很好听的沙沙声。苏苏咬着半个冒着热气的奶黄包，开心地走在回家的路上。打开家门口的牛奶味饼干围栏时，她忽然听见压抑的小声呜咽。<br>她四下张望着，声音似乎来源于隔壁刚搬进来的一户人家。咦，窗台边怎么有一个捧着心的小男孩在哭，是学不会照顾自己的心吗？<br>奶黄包还剩一个，是热的。<br>小蛋糕好像家里也还有几个。</p>
+<font size="4" weight=bold>
+Ⅷ
+</font>
+
+<p>她看了看自己破碎的不甜的心，用糖霜勉强补成心的样子。<br>然后趁着融化前的一点点时间，她一手握着心，一手拎着装着甜食的篮子，快速跑到隔壁的屋子前，努力平复了一会呼吸，抬起手敲了敲门。<br>“你好，请问你需要一颗心吗？”</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 Threonine&#39;s blog
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Threonine
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

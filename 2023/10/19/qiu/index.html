@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>qiu | Threonine&#39;s blog</title>
+    <meta name="author" content="Threonine" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.4/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.8.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.8.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>THREONINE&#39;S BLOG</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;THREONINE&#39;S BLOG</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>qiu</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/10/19
+        </span>
+        
+        <span class="category">
+            <a href="/categories/Future/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                Future
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/Sensibility/" style="color: #00a596">Sensibility</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>written by 蓬蓬</p>
+<font size="4" weight=bold>
+（一）
+</font>
+
+<p>门口推车上的整齐而称得上精致的木材又从它被修修补补后依旧不牢固的缺口处掉到了地上，凹凸不平的硬土地与长而细的木条磕碰发出清脆而动听的声音，混入了交杂着房檐下挂着的风铃，旁边人家的推磨发出的沉闷而绵长的，以及路过的、被牵着的驴发出的嘶鸣所组成的，在这个四处冒着炊烟的，刚被太阳晒醒的小村子里每天都会上演的交响乐里。<br>但是风草该走了。<br>虽然村民们每天都会给它留一些吃的，很多人路过它的时候总喜欢蹲下来抚摸它的背，也有一小部分会在它不在猪圈里打滚弄了一身灰的时候把它抱起来抓住它的爪子左右扭动。<br>它很喜欢一个小女孩为他在废弃棚屋里做的小窝，那是几片彩色的，似乎被称为衣服的布料，放在一个足够容纳它的木盒子里，总会有人将一些布料扔到棚屋里，时间长了，它慢慢开始从里面挑出那些和那个女孩的眼睛一样颜色的布料用，但是她却再也没有来过。<br>这也许是它想要离开的理由，它想，仅仅这一条也许就已经够了。虽然木头小窝很暖和，虽然每天都会有吃的，虽然这里的人们是这样的友善。但是它觉得自己不应该这么呆下去，它似乎缺少了一些什么，它想不明白，它很在乎。<br>这样的想法在如同每天的饭菜内容一般无规律可循的旅商在几天后的早晨突然从眼前经过时达到了顶峰。在旅商离开村子时，风草偷偷绕过村子里的大路追了上去，轻轻的跃进了货车车厢里。<br>粗短的爪子扒着车沿，它看着许许多多的从眼前飘过的，树，草，花，人，乃至于还有一个同样坐在马车中抱着猫的人类在飘窗若隐若现的样子也在它的脑子里留存了一丝印象。直到远处的太阳只剩了一半，湛蓝的天空变得通红，它突然意识到，自己回不去了。<br>在旅商把货车放在门外自己走入旅店中时，它跳出货车，准备依旧像往常一样随便跳入一家人家的窗户，寻找它的晚饭。<br>这时它见到了一团风滚草。<br>风草的名字是它给自己取的，因为曾经见过，在大风中漫天飞舞的这样一团草，它觉得和自己很像，于是便这么叫自己了。<br>它决定今天不依靠人类。<br>它轻轻的重新跳到窗台边上的平台上，如果换作往常，它并不在乎碰到些什么，因为大部分人类都会在发现它之后主动给它提供食物。但是它今天很害怕，它似乎觉得自己离开了一些什么，又好像感觉靠近了一些什么，它想不明白，但是它静悄悄地跳出了窗户，紧张地远离这个院子，漫无目的地走向漆黑的荒野，下意识地远离他熟悉的灯火。<br>直到它看见隔着几丛灌木的，不远处那一双，闪烁着熟悉颜色的眼睛。</p>
+<font size="4" weight=bold>
+（二）
+</font>
+
+<p>那双眼睛同样谨慎地看着它，村庄夜晚的灯火亮着，亮着，它能隐约感觉到，它是和自己身形差不多的，也许是可以相识的，另一团风滚草。<br>“你好？”<br>夏日的晚风吹过低矮的草丛，吹过成片的灌木，吹过它们身处的树林，它听到了蚂蚁触须相抵的声音，萤火虫扑动翅膀的声音，以及被风唤醒的蝉又不耐烦地随着第一位好事者开始的又一轮的蝉鸣。但是那双眼睛却不言，只是依然定定地望着它，像是一位尽职的守卫，守卫着对它来说也许是未知的东西。<br>它低下头，慢慢地寻找能向那双眼睛靠近的路，它总能感到那双眼睛的目光正沉默却愈发灼热地射向它，它更不敢抬头了。<br>直到最后一个灌木前，这种沉默而紧张的氛围把风草压抑的快要窒息，它立在了最靠近那双眼睛的一个树后面，坐起来，看向它，歪了歪头。<br>“为什么要靠近我呢？”<br>“我不知道。”虽然被突如其来的女声吓了一跳，但是风草还是佯装镇定地回答了她。不知道为什么，有一种奇怪的情绪混杂着他不可名状的冲动，推动着他向她靠近。<br>他直起身来，两只爪子在身前竖直着上下摩擦，不知所措的把脸转向一边。她歪着头看了他一会儿，便走向了他，满是枯叶和树枝的地上随着她的步子发出吱嘎吱嘎的碎裂的声音，风草的尾巴僵硬地笔直着，一动不动地悬置在地上。<br>“我叫维亚，你呢。”她绕过了那颗挡在他们面前的树，在他身体朝向的前面坐了下来，拿爪子在他面前晃了晃。<br>虽然体型比自己要小一些，但是风草却感受到一种很温和的压迫感，他偷偷看了一眼她正在以很缓慢而看起来很愉悦的频率摇晃着的尾巴，有几圈很漂亮的白色环纹，映衬着月光像是从天上偷偷撕下来的几小条云，被她圈在了尾巴上。<br>“啊，我叫风草。”他突然意识到自己差点忘了回答她的问题，扭过头来，两只前爪无处安放地一会儿在前一会儿在后。<br>“你不睡觉吗？”<br>“应该，找个灌木躺一躺就好了吧。”他嗫嚅着，呆呆地看着天上的月亮，不知道该如何是好。<br>“容易着凉的哦，怎么活这么大的？走吧，我家旁边还有个多余的窝。”<br>夜晚的树林仿佛一只安稳熟睡的野兽，月光穿过厚密的树叶洒在被它俩踩着，发出吱吱嘎嘎声音的枯叶上。风草塌着脖子和背小心地跟着维亚，看着不断从她身上掠过的月光，大脑一片糊涂却同时一片空白，又下意识地警惕着四周不熟悉的声音。但是除了不知名的昆虫在扑动翅膀，偶尔的蛙叫和风吹过树叶的窸窸窣窣的声音以外，没有任何能让他表达自己能保护维亚的机会。或者说，也许她并不需要自己的保护？但是她为什么……<br>“我不知道哦。”在到了一棵树前面后，她突然快速迈了两步转了回来面对着他。“我知道你应该有很多想问的，但是我猜我大概也是不知道的，所以也不用问的。”她半立在那儿，用左前爪在面前的一小片地上来来回回地刨来刨去，枯叶被扒开之后露出了湿漉漉又松软的黑色泥土，她注意到泥土裸露后又下意识地把植被又小心翼翼地扒拉回去。风草看着，眨了眨眼。<br>“会爬树嘛？”<br>风草点了点头。<br>“这棵树上面有个树洞，一直是空的，留给你了哦。我就在旁边另一棵树上，已经很晚了，早点睡哦。”<br>风草迷迷糊糊地从嘴角流出了谢谢，然后呆立在那里，她上前去，用脸蹭了蹭风草的脖子，又用整个身体挤了挤他，然后走到他身后，“快去吧，快去。”<br>风草用脸蹭了蹭前腿，三步并两步爬上树，站在洞旁边，他转身向下看，维亚正歪着头望着他。<br>“维亚也要早点睡哦……”他小声说。<br>他在梦里回忆到，维亚好像点了点脑袋，然后又微笑起来。</p>
+<font size="4" weight=bold>
+（三）
+</font>
+
+<p>维亚每天都会给风草准备吃的。<br>风草起床时，洞口有时候会是一只红红的苹果，也有可能是小半串香蕉，偶尔会有一些他只在人类的市场里才能见到的，他叫不少名字的奇怪水果。<br>每当这种水果出现时，就意味着他很有可能一天都见不到维亚。<br>不过大部分时候，当他拿着苹果在不远处的小河里，一边拿爪子搓脸顺便洗苹果的时候，维亚就会静悄悄地坐到他后面看着他。等他洗完苹果开始吃的时候，转头就会看见维亚。他很喜欢维亚眼睛下面延伸过整个面颊的黑色眼袋，和眼睛上面的，泾渭分明的纯白色的，宽阔的眉毛。相比在水面上看到的模糊不清的自己来说，他搜肠刮肚的从以前在人类那里听到和看到的词汇中努力地翻找出来一些：比自己更加的漂亮，可爱，温柔，喜欢。<br>他想起，在他遇到维亚的第二天，维亚带着他去了一个废弃的人类村庄。维亚说，这是她很久以前生活的地方。她那时候很喜欢这个村庄，她那时相信自己可以永远地在这个村庄中生活下去，村民永远都会因为认为她是“可爱的”，因此为她留一个小窝，给她吃的，无条件地照顾她。她心安理得地享受着那一切，如同她相信太阳每天都会升起，照亮每一小片大地一般，不算大的村庄也应该足够照亮她的一切。<br>但是有一天早上，她被许多的嘈杂的声音吵醒，这里的人们慌慌张张地收拾东西，再没有像平时那样给走在村庄里的她投喂食物，而是步履匆匆地经过她，来来回回地搬东西，她紧张地站在人们不会经过的路边，就那样看着他们，直到最后一对夫妻把大包小包拉上拖车然后离开村子。<br>“我一开始还天真地相信着，他们一定会回来的，所以看见老鼠啃最照顾我的一个爷爷的床，我会把它赶走；看见遗留下的橘子有一小块发霉了会把那只移开；看见竖在门外的锄头倒了会努力把它拖到雨淋不到的地方。”<br>说着说着，维亚停在了一个屋子边，转头看向了村子正中，风草也停了下来，歪着头看着她，他那时候觉得自己还是听维亚说比较好，便轻轻地放下后腿，坐在了满是沙尘的地上。<br>“可是后来床还是被啃没了，蜘蛛网爬满了那个放橘子的箩筐，锄头也因为不用最终生锈了。”<br>“我那时候在想，其实我本就可以再换个村庄继续这么生活的，我相信别的村的人们也会同样喜欢我，但是，那天早晨的，步履匆匆的人们，好像把我一些我不知道的东西踩碎了，它永远地碎在了这里，我怎么也拼凑不起来，如果再去别的村子就总会让我想起来，我有东西落下了。”<br>“所以我最后决定要自己生活，躲开能够供养我的地方。我有好长一段时间差点被饿死，但是风草你看，我现在能好好活下来了。并且，我想试着把我失去的东西，找到一些，一点点也好。”<br>她扭过头，直愣愣地看着风草。他感受到了一些他说不上来的东西，但是无奈地沉默着，他感觉什么也说不出口。<br>维亚张开了嘴，但是又闭上了，她微微笑了笑，走向风草，在身上擦干净爪子之后揉了揉风草的脸。<br>“很喜欢风草哦，会愿意照顾风草的。”<br>他似懂非懂地点点头。那天的旅程就那样结束了。<br>从那以后，他一直都会在路上琢磨，“喜欢”，到底是什么？在被维亚拉着去远处的大树林的路上，他同样低着头想了一路，直到不知不觉地撞上了维亚的尾巴。他一下子回过神来。<br>“明天会给你一只莲雾哦。”维亚看着前面的树，头也不回地说到。<br>“诶，这是什么？”<br>“吃就是了。嗯，然后，我明天晚上才会回来，风草要早点睡。”<br>“哦好！”他闭上眼，轻轻抬头摇晃摇晃脑袋表达自己会听话的样子。但是维亚并没有回头，他睁开眼之后意识到这个然后又轻轻低了下来，轻轻的呜咽了一声，“怎么了吗。”他小声地问道。<br>“没事的啦，就像之前一样。”维亚这才转过头来，拿自己的前爪揉了揉风草的脸。<br>风草很羡慕维亚能用前爪做很多事情，他偶尔会背着维亚偷偷抬起自己的前爪，但是他什么也做不到。<br>太阳东升西落的速度似乎越来越快了，他决定趁明天维亚不在试着记录一下。不知道为什么，他下意识地觉得今天陪着维亚的时间格外地短，他有着越来越强烈的冲动想要主动地蹭蹭维亚的脸。<br>直到天空阴沉着开始落雨以前，他都没有意识到，自己以前从来没这么想过。<br>他偷偷地靠近维亚，看着雨水沿着维亚柔软而细密的毛滑落到地上，又看了看自己的被打湿后黏在身上的皮毛，他放弃了要主动蹭维亚的念头，在互道晚安之后，他头也不回地钻进了树洞里。<br>是什么时候开始互道晚安了呢？在这个念头冒出来的没多久，水滴打在树洞外壁的声音裹挟着他明天要记录太阳的想法拽着他的意识沉睡了过去。</p>
+<font size="4" weight=bold>
+（四）
+</font>
+
+<p>风草第一次吃到这么好吃的水果。他把莲雾的核放在地上，不停地舔着爪子，最后歪着头想了想，把核也吃掉了。他抬起头看向维亚的树洞，定定地愣了好一会儿，决定乖乖地等维亚回来再问她要。<br>正午的太阳直射过并不算茂密的树林，打在正在记录木棍影子长度的风草的身子上，他总觉得相比之前的离去，他更在乎这次的维亚一些些，但是，她肯定会回来的，她是这样告诉他的，他很奇怪地想要相信她。<br>直到黄昏降临，维亚依旧没有如同往常一般偷偷地走到他背后然后突然冒出来。<br>风草佯装镇定，依旧在努力刻下太阳光照出的竖着的树枝的影子长度和角度的爪子开始颤抖起来。他从昨天维亚没有回头的那一刻开始的奇怪预感终于拖动着无数的细节和证据压在了他身上。他有点喘不过气来。<br>他要去找维亚。<br>风草觉得还没有到自己应该走的时候，维亚不是他的另一个村子，维亚就是维亚。他最后看了一眼那个白天被自己用力插入泥土的笔直的木棍，扭头扎进了树林里。<br>到底是为什么呢？仅仅是因为她说过喜欢自己，愿意照顾自己吗？人们同样表达了相同的感情，同样为他提供了住处和食物，为什么他总是隔一段时间就想要离开呢？<br>她的气味在飘散了一天之后已经变得异常的微弱，风草焦急地集中精神，在自己并不熟悉的树林中狂奔，丝毫不在乎被未经修剪的树枝在不善走夜路的他的皮肤四处留下了一道道划痕。<br>风草依旧没有想明白，他茫然地觉得这大概和维亚对自己说的“喜欢”有关，但是到底有什么关系呢？他没空思考这个，他感觉到气味稍微容易追踪了一些，这让他欣喜若狂。<br>随着气味越来越容易分辨，他紧张的开始冒汗，他颤抖着狠狠地甩了几下身子想要把汗甩干，可惜杯水车薪。<br>他想知道，那天维亚张嘴却没有说出来的第一句，到底是什么。这个问题支撑着他的意识，即便身上的伤口混合着他的汗水疼的他泪流满面，不停地倒吸冷气，但是他依旧拼命地在树林中狂奔。<br>他看到了那天他本准备在其中安下新家的村庄。<br>他躲在了一丛灌木之后，远远地望着那个村庄，除了一两个屋子还亮着灯以外，大部分人们似乎也都进入了梦乡。在发现维亚的气味越来越浓郁时，他缓缓地靠近了村子。<br>盛夏的蝉鸣与蛙叫声很好的掩盖了他因疲惫与划伤而控制不住的脚步。他努力地，轻轻地，嗅着空气中维亚的气味的来源，一点点向前走去。<br>维亚的气味从一辆盖着厚厚深色布的拖车里传了出来。他轻轻地越了上去。熟悉的人类气息并不能掩盖维亚在他身上蹭蹭时留下的气味带给他的记忆；车上堆积的各色水果此刻却让他无比惊恐；他颤抖着，激动着，用嘴叼开了深色的厚布。<br>维亚被关在一个放水果的木头箱子里。<br>他顶了顶箱子，然后听见了维亚的羸弱的呼救。他松了口气，三下五除二拆开了木头箱子。然后从箱子上面探头探脑的看着维亚。<br>维亚看着他沉默了一会儿，然后缓缓地从箱子里爬了出来，跟着他往他们的家的方向走去。<br>“为什么要靠近我？”维亚轻声的质问。<br>风草抖了抖身子，努力地挺直了一些，轻轻地晃了晃尾巴，然后很快地晃了晃脑袋，但是走的更慢了一些。<br>“我发现自己晚上的视力好像还不错，下次维亚如果晚上要离开的话一定要和我说哦，也许我本来就是夜猫子诶，是可以陪着维亚的……”<br>“为什么，要，靠近我？”维亚停了下来，逼迫着风草同样停下来转身。<br>“即使维亚，向来缘浅。”</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 Threonine&#39;s blog
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Threonine
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

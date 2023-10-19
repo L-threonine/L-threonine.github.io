@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>21st-2 | Threonine&#39;s blog</title>
+    <meta name="author" content="Threonine" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.4/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.8.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.8.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>THREONINE&#39;S BLOG</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;THREONINE&#39;S BLOG</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>21st-2</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/10/19
+        </span>
+        
+        <span class="category">
+            <a href="/categories/Past/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                Past
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/Reason/" style="color: #00bcd4">Reason</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <font size="4" weight=bold>
+“一朵痛苦的、绝望的、美丽的灵魂。”
+</font>
+
+<p>好久不见。<br>又是一年，365天。<br>想起很久之前对自己做过这样的论断：“我每时每刻都在改变，我无法判断它们是好是坏，但不可否认的是，它们都是我的一部分。”或许正因为如此，自我体察和记录才有了存在的必要和意义，像是书写一段专属于我的，“历史”。<br>是我来过的证明。</p>
+<p>思绪是繁杂的。有很多想要写下的内容，但找不到一条逻辑明晰的叙述方式。总想尽力逃开碎片化的表达，最后又不可避免地选择，就像是一场旷日持久的拉锯——只不过两边都是自己，于是总抱着温柔的宽容，任其沉沦。<br>再纵容一次。<br>所以这篇或许可以称之为总结的文字，大概最后还是会碎得不像样。满溢的情绪是每一段的休止符，思维在情绪的抽离下找不到精确的落点，所以逻辑的碎断几乎是可预见的必然。我甚至意欲给予自己更多的偏爱——如果剖析自己太痛苦，那想不清楚也没关系。<br>朦胧也是美的。</p>
+<p>不妨从对社交关系和亲密关系的认知开始。十八岁的苏氨酸曾写下“我用了三分之一的人生来爱，根据糖水不等式，只增不减。”故事在持续二十分之八的生命长度后，总算画上了并不完美的句点。我自知所谓的爱恋只是对我理想化个体的欲望投射，甚至长情或许也只是欺瞒自己的谎言。于是借着闲暇，以好奇为原动力，戴着崭新的假面，用敏感的情绪感知妄图换一场真诚。隔着网络的纱，伪装和欺瞒都显得轻易，直到不知名的情绪出现——我将其定义为怜悯、定义为移情、定义为自救，唯独不能算作爱。实际上，它与横亘了经年的自我折磨并无差别，我似乎只会用这样一种卑微的仰慕的姿态，用一厢情愿的自我感动反复蹂躏早已跌入泥泞的自我认知，用委曲求全来和佯装理性的思考来讨好以延长关系存在的时间，再努力说服自己依旧有爱的能力。<br>是一具承载他人欲望的空壳。<br>是终会碎裂的梦境里的泡沫。<br>这样的依恋和信赖太沉重太沉重，所以只能与自我认知捆绑，锁在深处并且一遍遍告诉自己：不许期待，不许讨要，不许信任，不许受伤。<br>你看，造出来的漂亮精致的外壳还足够让人喜欢，只要距离足够远，抑或是双方都心照不宣，这样的谎言也有存在的价值和理由——至少对于双方而言都是愉快的情绪体验。能讨得赖以生存的一点点快乐，能在关系走向终末时及时抽身——毕竟只要不抱有期待，就不会受伤。甚至能在极尽亲昵的时刻，以调笑的语气坦白一部分粘稠的阴暗，再被报以或真或假的宽容与承诺。事实上，真假与否并不重要，就像是自我麻痹的酒精抑或是梦境，只要此刻存在，只要此刻欢愉。<br>反正我也拿不出几分真心。<br>以及不值一文的陪伴和喜爱还会有人需要。<br>各取所需未尝不是一件乐事，我自认支付的情绪价值足够换得我需要的报酬。在关系之外，仍给予无限宽广的自由，正如上一段亲密关系开始前所承诺的那样：“空窗期需要安慰也好，寂寞了需要安慰也罢，我给予你随时想要停止的权利。”<br>毕竟我的承诺一直都是，陪伴到不需要为止。随时可以推开，随时欢迎来取。<br>足够真诚，足够无私，足够冷漠。<br>也足够欺瞒一个又一个灵魂。</p>
+<p>去年的此刻，我交付金钱，妄图寻找一处安放满溢的情绪；<br>今年的此刻，我交付微薄的爱意，去寻无数个暂时的休憩点。<br>不要留恋，不要信任，不要奢望，不要占有。<br>给该离开的时刻，留一点决绝的体面。<br>是我能给予自己的，最后的温柔和善良。</p>
+<p>除却对亲密关系的认知几乎发生了翻天覆地的变化外，另一件值得记录的改变是对于精神疾病的观点。抑郁状态下的上一篇文字零落且无逻辑，但或许恰好能在一定程度上反映情绪状态。但很奇特的是，不知是跌落到谷底的自我保护机制起了作用，抑或是讨得的一点理解起了效果，对于自身或许并无疾病这件事有一种无来由的自信——如果说常人的情绪起伏有一定的区间，或许所谓的轻中度精神疾病只是稍微超过了边界——抑郁是超过了下确界，躁狂是超过了上确界。不然如何解释抑郁的几项情绪表现，几乎能在面临重大挫折的人身上体现的淋漓尽致；而轻躁狂的某些表现也可定义为“乐观开朗”的表现？<br>似乎只要我能够条理分明的剖开自己，准确地定性每一束情绪的由来，找到异常的部分并及时予以解决，一切就能和大众眼中的“正常”并无差别。像是18岁那年的稚语：“只是很凑巧地醒了而已。”<br>那就醒着活下去。<br>有充足的自信不需要药物的辅助治疗，药物治疗的副作用或许是我无法承受的代价。我相信我拥有能让自己快乐和冷静的能力，我必须对自己拥有足够的掌控力，无论是对情绪还是未知的未来。<br>因为我是最了解自己的人，也是唯一坚定地要救自己的人。<br>再没有一个人会像我这样怨恨自己，同时又最温柔地爱着自己了。<br>不会有的。</p>
+<p>一年的时间仿佛在封控的存在下极短又极长，幸运的是孤寂已经成为常态，倒也不觉得过于难捱。当时浓墨重彩的记忆在此刻只剩了淡淡的一缕，像是水粉颜色在湿润的纸上暧昧着朦胧不清。<br>和父母的关系也在激烈的碰撞后，变得礼貌且疏离。在某种意义上或许是逃避，但寻了个保持冷静的缘由，让我的行为看起来不太糟糕——会为未来可能发生的一切做好预案，摒弃情绪后能做出更合适更理智的决策。<br>毕竟家庭对我而言象征意义大于实际意义，“是一个对家庭完全失望的人。”并不怨恨，也并不期待从家庭中得到什么，能支撑我为其负责的，大抵和我愿意按着周期往垃圾桶里丢弃药物，定期去心理医生处复检的理由一样——一些无谓的社会责任感。<br>我会扮演一个合格的女儿。<br>在我的假面未碎裂之前。</p>
+<p>或许经年之后所有的记忆都不过是过眼云烟，就如同翻阅过往的日记总觉得有些幼稚得可爱。想起站在珠峰面前时思绪不自觉飘得很远——或许一场足够冷的干净的雪，一场美丽的澄澈的意外，就能让一朵花凋谢在并未盛放的时刻。但脆弱和顽强，完全矛盾的形容词可以在生命的维度上共存——在面对死亡的恐惧时，是那样出乎本能地，抛弃所有尊严地想要活下去。<br>所以这次我们不约定终末的时间，只想祝你快乐。<br>我将给予你同等的温柔和宽容，尊重你的一切选择。</p>
+<p>21岁的苏氨酸，生日快乐。<br>祝你今天快乐，明天快乐，后天也快乐。</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 Threonine&#39;s blog
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Threonine
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
